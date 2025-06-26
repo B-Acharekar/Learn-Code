@@ -22,5 +22,3 @@ console.log(typeof NaN); // number
 console.log(NaN === NaN); // false
 console.log([] + {});     // "[object Object]"
 console.log({} + []);     // 0 in some contexts
-
-Nan
