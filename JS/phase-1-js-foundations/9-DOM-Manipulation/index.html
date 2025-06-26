@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basics</title>
+    <style>
+        #highlight {
+            color: blue;
+        }
+
+        .box {
+            padding: 20px;
+            border: 2px solid gray;
+            margin: 10px;
+        }
+
+        .child {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 1rem;
+        }
+
+        input,
+        button {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="domBasic">
+        <h1 id="main-title">Hello DOM!</h1>
+        <p class="info">Click the button to change text and style</p>
+        <button id="change-btn">Change Text</button>
+        <img src="https://placehold.co/600x400" alt="placeholder" id="sample-img">
+    </div>
+
+    <div id="events">
+        <h1>🖱 Event Demo</h1>
+
+        <button id="click-btn">Click Me</button>
+        <input id="key-input" type="text" placeholder="Type something..." />
+
+        <div class="box" id="parent">
+            Parent
+            <div class="child" id="child">Child</div>
+        </div>
+    </div>
+
+    <div id="forms">
+        <h1>📝 Simple Form</h1>
+
+        <form id="signup-form">
+            <label>Name: <input type="text" id="name" /></label><br />
+            <label>Email: <input type="email" id="email" /></label><br />
+            <label>Password: <input type="password" id="password" /></label><br />
+            <button type="submit">Submit</button>
+            <p class="error" id="error-msg"></p>
+        </form>
+    </div>
+
+    <script src="domBasics.js"></script>
+    <script src="events.js"></script>
+    <script src="forms.js"></script>
+
+</body>
+
+</html>
