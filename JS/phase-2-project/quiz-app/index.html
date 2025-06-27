@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+  <style>
+    .bg-custom {
+      background-color: rgb(67 85 255);
+    }
+
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .question {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
+    }
+
+    .question p {
+      font-weight: 500;
+    }
+
+    .answer-options label {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #f1f3f5;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      display: block;
+      transition: background-color 0.2s;
+    }
+
+    .answer-options label:hover {
+      background-color: #e9ecef;
+    }
+
+    .btn-success {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-custom">
+      <div class="container-fluid d-flex align-items-center gap-2 px-4">
+        <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="#">
+          <img src="https://logo.clearbit.com/quizlet.com" alt="Quizlet Logo" width="40" height="40"
+            class="d-inline-block" />
+          <span class="ms-2">QuizApp</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <div class="text-center mb-4">
+      <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+    </div>
+
+    <div id="quiz-question" class="question-container d-none"></div>
+    <div id="result" class="d-none"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
