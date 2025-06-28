@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-3xl space-y-6">
+    <header class="text-4xl font-extrabold text-center text-blue-700">Typing Speed Test</header>
+
+    <section
+      id="sentence-section"
+      class="text-xl text-gray-800 text-center bg-blue-50 border border-blue-100 rounded-lg p-5 font-medium"
+    >
+      Click "Start" to load a sentence.
+    </section>
+
+    <textarea
+      id="text-input"
+      class="w-full h-32 border border-gray-300 rounded-lg p-4 text-base resize-none shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="Start typing here..."
+    ></textarea>
+
+    <div class="flex flex-col sm:flex-row justify-between gap-4 text-lg font-medium text-gray-700">
+      <div id="timer" class="flex-1 text-blue-600">Time: 0.0s</div>
+      <div id="result" class="flex-1 text-green-600 text-right">WPM: 0 | Accuracy: 0%</div>
+    </div>
+
+    <div class="flex justify-center gap-4">
+      <button
+        id="start-btn"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition duration-200"
+      >
+        Start
+      </button>
+      <button
+        id="restart-btn"
+        class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-semibold transition duration-200"
+      >
+        Restart
+      </button>
+    </div>
+  </div>
+
+  <!-- Main JS -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
