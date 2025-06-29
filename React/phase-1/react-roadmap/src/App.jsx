@@ -23,6 +23,13 @@ import FunctionalUpdate from './topics/03-state/FunctionalUpdate'
 import PropsVsState from './topics/03-state/PropsVsState'
 import ControlledInput from './topics/03-state/ControlledInput'
 import LiftingStateUp from './topics/03-state/LiftingStateUp'
+import BasicEffect from './topics/04-useEffect/BasicEffect'
+import CleanupEffect from './topics/04-useEffect/CleanupEffect'
+import EffectDependencies from './topics/04-useEffect/EffectDependencies'
+import LifecycleEquivalents from './topics/04-useEffect/LifecycleEquivalents'
+import FetchData from './topics/04-useEffect/FetchData'
+import ResizeListener from './topics/04-useEffect/ResizeListener'
+import TimerInterval from './topics/04-useEffect/TimerInterval'
 
 function App() {
   return (
@@ -56,6 +63,15 @@ function App() {
       <ControlledInput/>
 
       <LiftingStateUp/>
+
+      <BasicEffect/>
+      <EffectDependencies/>
+      <CleanupEffect/>
+      <LifecycleEquivalents/>
+
+      <FetchData/>
+      <ResizeListener/>
+      <TimerInterval/>
     </>
   )
 }
