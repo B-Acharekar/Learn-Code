@@ -33,6 +33,8 @@ import TimerInterval from './topics/04-useEffect/TimerInterval'
 import ControlledForm from './topics/05-forms/ControlledForm'
 import ControlledEvents from './topics/05-forms/ControlledEvents'
 import UncontrolledForm from './topics/05-forms/UncontrolledForm'
+import DynamicList from './topics/06-lists/DynamicList'
+import ListWithKeys from './topics/06-lists/ListWithKeys'
 
 function App() {
   return (
@@ -79,6 +81,9 @@ function App() {
       <ControlledForm/>
       <ControlledEvents/>
       <UncontrolledForm/>
+
+      <DynamicList/>
+      <ListWithKeys/>
     </>
   )
 }
