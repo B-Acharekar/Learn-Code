@@ -30,6 +30,9 @@ import LifecycleEquivalents from './topics/04-useEffect/LifecycleEquivalents'
 import FetchData from './topics/04-useEffect/FetchData'
 import ResizeListener from './topics/04-useEffect/ResizeListener'
 import TimerInterval from './topics/04-useEffect/TimerInterval'
+import ControlledForm from './topics/05-forms/ControlledForm'
+import ControlledEvents from './topics/05-forms/ControlledEvents'
+import UncontrolledForm from './topics/05-forms/UncontrolledForm'
 
 function App() {
   return (
@@ -72,6 +75,10 @@ function App() {
       <FetchData/>
       <ResizeListener/>
       <TimerInterval/>
+
+      <ControlledForm/>
+      <ControlledEvents/>
+      <UncontrolledForm/>
     </>
   )
 }
