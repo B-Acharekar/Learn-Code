@@ -52,6 +52,8 @@ import Home from './topics/11-router/Home.jsx';
 import About from './topics/11-router/About.jsx';
 import Profile from './topics/11-router/Profile.jsx';
 import UserDetails from './topics/11-router/UserDetails.jsx';
+import UsersFetch from './topics/12-api/UsersFetch.jsx';
+import TestTailwind from './topics/13-styling/TestTailwind.jsx';
 
 
 function App() {
@@ -130,6 +132,12 @@ function App() {
           <Route path="/profile/:username" element={<Profile />} />
           <Route path="/user/details" element={<UserDetails />} />
           <Route path="/topics" element={<Topics />} />
+
+          {/* 12 - API */}
+          <Route path="/api/users-fetch" element={<UsersFetch/>}/>
+
+          {/*13- Styling in React */}
+          <Route path="/test/tailwind" element={<TestTailwind/>}/>
         </Routes>
     </>
   );

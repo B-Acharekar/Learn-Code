@@ -1,16 +1,26 @@
-import ThemeProvider from "./context/ThemeProvider";
-import DeepComponent from "./context/DeepComponent";
+import { useEffect, useState } from "react";
 
-function UseContextExample() {
+function List({ getItems }) {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems(getItems());
+    console.log("📦 List re-rendered due to getItems change");
+  }, [getItems]);
+
   return (
-    <ThemeProvider>
-      <div>
-        <h2>🌐 useContext Hook Example</h2>
-        <p>Theme toggle logic is global & avoids prop drilling 🚀</p>
-        <DeepComponent />
-      </div>
-    </ThemeProvider>
+<ul className="mt-4 space-y-2">
+  {items.map((item) => (
+    <li
+      key={item}
+      className="bg-blue-100 text-blue-900 px-4 py-2 rounded shadow-sm"
+    >
+      Item: {item}
+    </li>
+  ))}
+</ul>
+
   );
 }
 
-export default UseContextExample;
+export default List;

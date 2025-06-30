@@ -1,38 +1,20 @@
-import { useState, useCallback } from "react";
-import List from "./List";
+import { useEffect, useState } from "react";
 
-function UseCallbackExample() {
-    const [number, setNumber] = useState(1);
-    const [dark, setDark] = useState(false);
+function List({ getItems }) {
+  const [items, setItems] = useState([]);
 
-    const getItems = useCallback(() => {
-        return [number, number + 1, number + 2];
-    }, [number]);
+  useEffect(() => {
+    setItems(getItems());
+    console.log("📦 List re-rendered due to getItems change");
+  }, [getItems]);
 
-    const theme = {
-        backgroundColor: dark ? "#222" : "#eee",
-        color: dark ? "#fff" : "#000",
-        padding: "1rem",
-    };
-
-    return (
-        <div style={theme}>
-            <h2>🧠 useCallback Hook Example</h2>
-
-            <input
-                type="number"
-                value={number}
-                onChange={(e) => {
-                    const value = parseInt(e.target.value, 10);
-                    if (!isNaN(value)) setNumber(value);
-                }}
-            />
-
-            <button onClick={() => setDark((prev) => !prev)}>Toggle Theme</button>
-
-            <List getItems={getItems} />
-        </div>
-    );
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item}>Item: {item}</li>
+      ))}
+    </ul>
+  );
 }
 
-export default UseCallbackExample;
+export default List;

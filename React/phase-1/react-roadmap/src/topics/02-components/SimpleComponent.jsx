@@ -1,5 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 export default function SimpleComponent() {
-    return <h2>This is a simple functional component.</h2>;
+  return (
+    <div className="p-4 bg-white dark:bg-zinc-800 rounded-xl shadow-md text-center">
+      <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
+        This is a simple functional component.
+      </h2>
+    </div>
+  );
 }

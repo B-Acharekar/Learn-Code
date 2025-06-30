@@ -2,77 +2,135 @@ import { Link } from 'react-router-dom';
 
 export default function Topics() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-      {/* 01 - Basics */}
-      <Link to="/why-react">Why React</Link>
-      <Link to="/virtual-dom">Virtual DOM</Link>
-      <Link to="/declarative-vs-imperative">Declarative vs Imperative</Link>
-      <Link to="/spa-concept">SPA Concept</Link>
-      <Link to="/cra-or-vite-setup">CRA or Vite Setup</Link>
-      <Link to="/file-structure">File Structure</Link>
-      <Link to="/jsx-basics">JSX Basics</Link>
-      <Link to="/jsx-expressions">JSX Expressions</Link>
-
-      {/* 02 - Components */}
-      <Link to="/simple-component">Simple Component</Link>
-      <Link to="/returning-jsx">Returning JSX</Link>
-      <Link to="/props-example">Props Example</Link>
-      <Link to="/children-prop-example">Children Prop Example</Link>
-      <Link to="/class-component-demo">Class Component Demo</Link>
-      <Link to="/reusable-button">Reusable Button</Link>
-      <Link to="/nested-components">Nested Components</Link>
-      <Link to="/smart-dumb-example">Smart vs Dumb Components</Link>
-
-      {/* 03 - State */}
-      <Link to="/basic-state">Basic State</Link>
-      <Link to="/multiple-states">Multiple States</Link>
-      <Link to="/object-array-state">Object/Array State</Link>
-      <Link to="/functional-update">Functional Update</Link>
-      <Link to="/props-vs-state">Props vs State</Link>
-      <Link to="/controlled-input">Controlled Input</Link>
-      <Link to="/lifting-state-up">Lifting State Up</Link>
-
-      {/* 04 - useEffect */}
-      <Link to="/basic-effect">Basic useEffect</Link>
-      <Link to="/cleanup-effect">Cleanup Effect</Link>
-      <Link to="/effect-dependencies">Effect Dependencies</Link>
-      <Link to="/lifecycle-equivalents">Lifecycle Equivalents</Link>
-      <Link to="/fetch-data">Fetch Data</Link>
-      <Link to="/resize-listener">Resize Listener</Link>
-      <Link to="/timer-interval">Timer Interval</Link>
-
-      {/* 05 - Forms */}
-      <Link to="/controlled-form">Controlled Form</Link>
-      <Link to="/controlled-events">Controlled Events</Link>
-      <Link to="/uncontrolled-form">Uncontrolled Form</Link>
-
-      {/* 06 - Lists */}
-      <Link to="/dynamic-list">Dynamic List</Link>
-      <Link to="/list-with-keys">List With Keys</Link>
-
-      {/* 07 - Conditional Rendering */}
-      <Link to="/conditional-example">Conditional Example</Link>
-
-      {/* 08 - Hooks */}
-      <Link to="/use-ref">useRef Example</Link>
-      <Link to="/use-memo">useMemo Example</Link>
-      <Link to="/use-callback">useCallback Example</Link>
-      <Link to="/use-context">useContext Example</Link>
-      <Link to="/use-reducer">useReducer Example</Link>
-
-      {/* 09 - Custom Hooks */}
-      <Link to="/counter-app">Counter App</Link>
-      <Link to="/user-list">User List</Link>
-
-      {/* 10 - Performance */}
-      <Link to="/child-memo">Child Memo</Link>
-      <Link to="/performance-example">Performance Example</Link>
-
-      {/* 11 - React Router */}
-      <Link to="/home">🏠 Home</Link>
-      <Link to="/about">ℹ️ About</Link>
-      <Link to="/profile/john">👤 Profile: John</Link>
-      <Link to="/user/details">User Details</Link>
+    <div className="p-4 max-w-3xl mx-auto space-y-6">
+      {/* Section Component */}
+      {[
+        {
+          title: "01 - Basics",
+          links: [
+            ["Why React", "/why-react"],
+            ["Virtual DOM", "/virtual-dom"],
+            ["Declarative vs Imperative", "/declarative-vs-imperative"],
+            ["SPA Concept", "/spa-concept"],
+            ["CRA or Vite Setup", "/cra-or-vite-setup"],
+            ["File Structure", "/file-structure"],
+            ["JSX Basics", "/jsx-basics"],
+            ["JSX Expressions", "/jsx-expressions"],
+          ],
+        },
+        {
+          title: "02 - Components",
+          links: [
+            ["Simple Component", "/simple-component"],
+            ["Returning JSX", "/returning-jsx"],
+            ["Props Example", "/props-example"],
+            ["Children Prop Example", "/children-prop-example"],
+            ["Class Component Demo", "/class-component-demo"],
+            ["Reusable Button", "/reusable-button"],
+            ["Nested Components", "/nested-components"],
+            ["Smart vs Dumb Components", "/smart-dumb-example"],
+          ],
+        },
+        {
+          title: "03 - State",
+          links: [
+            ["Basic State", "/basic-state"],
+            ["Multiple States", "/multiple-states"],
+            ["Object/Array State", "/object-array-state"],
+            ["Functional Update", "/functional-update"],
+            ["Props vs State", "/props-vs-state"],
+            ["Controlled Input", "/controlled-input"],
+            ["Lifting State Up", "/lifting-state-up"],
+          ],
+        },
+        {
+          title: "04 - useEffect",
+          links: [
+            ["Basic useEffect", "/basic-effect"],
+            ["Cleanup Effect", "/cleanup-effect"],
+            ["Effect Dependencies", "/effect-dependencies"],
+            ["Lifecycle Equivalents", "/lifecycle-equivalents"],
+            ["Fetch Data", "/fetch-data"],
+            ["Resize Listener", "/resize-listener"],
+            ["Timer Interval", "/timer-interval"],
+          ],
+        },
+        {
+          title: "05 - Forms",
+          links: [
+            ["Controlled Form", "/controlled-form"],
+            ["Controlled Events", "/controlled-events"],
+            ["Uncontrolled Form", "/uncontrolled-form"],
+          ],
+        },
+        {
+          title: "06 - Lists",
+          links: [
+            ["Dynamic List", "/dynamic-list"],
+            ["List With Keys", "/list-with-keys"],
+          ],
+        },
+        {
+          title: "07 - Conditional Rendering",
+          links: [["Conditional Example", "/conditional-example"]],
+        },
+        {
+          title: "08 - Hooks",
+          links: [
+            ["useRef Example", "/use-ref"],
+            ["useMemo Example", "/use-memo"],
+            ["useCallback Example", "/use-callback"],
+            ["useContext Example", "/use-context"],
+            ["useReducer Example", "/use-reducer"],
+          ],
+        },
+        {
+          title: "09 - Custom Hooks",
+          links: [
+            ["Counter App", "/counter-app"],
+            ["User List", "/user-list"],
+          ],
+        },
+        {
+          title: "10 - Performance",
+          links: [
+            ["Child Memo", "/child-memo"],
+            ["Performance Example", "/performance-example"],
+          ],
+        },
+        {
+          title: "11 - React Router",
+          links: [
+            ["🏠 Home", "/home"],
+            ["ℹ️ About", "/about"],
+            ["👤 Profile: John", "/profile/john"],
+            ["User Details", "/user/details"],
+          ],
+        },
+        {
+          title: "12 - API",
+          links: [["User Fetch", "/api/users-fetch"]],
+        },
+        {
+          title: "13 - Styling in React",
+          links: [["Test Tailwind", "/test/tailwind"]],
+        },
+      ].map(({ title, links }) => (
+        <div key={title}>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">{title}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+            {links.map(([label, to]) => (
+              <Link
+                key={to}
+                to={to}
+                className="block px-4 py-2 rounded bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

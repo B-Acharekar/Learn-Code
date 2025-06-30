@@ -1,3 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Root */
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #1f1f1f;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Base body styling */
+body {
+  @apply m-0 min-h-screen flex items-center justify-center bg-white text-gray-800 dark:bg-zinc-900 dark:text-gray-100 transition-colors duration-300;
+}
+
+/* 3. Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900 dark:text-white;
+}
+
+/* 4. Anchors */
+a {
+  @apply font-medium text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 transition-colors;
+  text-decoration: none;
+}
+
+/* 5. Code blocks */
+pre, code {
+  @apply font-mono text-sm bg-zinc-100 dark:bg-zinc-800 text-gray-800 dark:text-gray-100 px-2 py-1 rounded;
+  overflow-x: auto;
+}
+
+/* 6. Buttons */
+button {
+  @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-zinc-200 dark:bg-zinc-800 hover:bg-indigo-100 dark:hover:bg-indigo-700 transition-colors;
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
+}
+
+/* 7. Lists */
+ul, ol {
+  @apply pl-6 list-disc space-y-2;
+}
+ul ul, ol ol {
+  @apply mt-2 pl-6 list-disc space-y-1;
+}
+
+/* 8. Section wrapper utility class */
+.section-wrapper {
+  @apply max-w-2xl mx-auto px-4 md:px-6 py-8 space-y-6 text-left;
+}
+
+/* 9. Light mode overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #1a1a1a;
+    background-color: #ffffff;
+  }
+}
+
+/* Vite/React defaults */
 #root {
   max-width: 1280px;
   margin: 0 auto;
