@@ -41,6 +41,8 @@ import UseMemoExample from './topics/08-hooks/UseMemoExample'
 import UseCallbackExample from './topics/08-hooks/UseCallbackExample'
 import UseContextExample from './topics/08-hooks/UseContextExample'
 import UseReducerExample from './topics/08-hooks/UseReducerExample'
+import CounterApp from './topics/09-custom-hooks/counterApp'
+import UserList from './topics/09-custom-hooks/UserList'
 
 function App() {
   return (
@@ -98,6 +100,8 @@ function App() {
       <UseCallbackExample/>
       <UseContextExample/>
       <UseReducerExample/>
+      <CounterApp/>
+      <UserList/>
     </>
   )
 }
