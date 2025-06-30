@@ -36,6 +36,11 @@ import UncontrolledForm from './topics/05-forms/UncontrolledForm'
 import DynamicList from './topics/06-lists/DynamicList'
 import ListWithKeys from './topics/06-lists/ListWithKeys'
 import ConditionalExample from './topics/07-conditional-rendering/ConditionalExample'
+import UseRefExample from './topics/08-hooks/UseRefExample'
+import UseMemoExample from './topics/08-hooks/UseMemoExample'
+import UseCallbackExample from './topics/08-hooks/UseCallbackExample'
+import UseContextExample from './topics/08-hooks/UseContextExample'
+import UseReducerExample from './topics/08-hooks/UseReducerExample'
 
 function App() {
   return (
@@ -87,6 +92,12 @@ function App() {
       <ListWithKeys/>
 
       <ConditionalExample/>
+
+      <UseRefExample/>
+      <UseMemoExample/>
+      <UseCallbackExample/>
+      <UseContextExample/>
+      <UseReducerExample/>
     </>
   )
 }
