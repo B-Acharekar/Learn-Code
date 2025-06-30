@@ -35,6 +35,7 @@ import ControlledEvents from './topics/05-forms/ControlledEvents'
 import UncontrolledForm from './topics/05-forms/UncontrolledForm'
 import DynamicList from './topics/06-lists/DynamicList'
 import ListWithKeys from './topics/06-lists/ListWithKeys'
+import ConditionalExample from './topics/07-conditional-rendering/ConditionalExample'
 
 function App() {
   return (
@@ -84,6 +85,8 @@ function App() {
 
       <DynamicList/>
       <ListWithKeys/>
+
+      <ConditionalExample/>
     </>
   )
 }
